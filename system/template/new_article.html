@@ -1,0 +1,13 @@
+<p class="title">Eintrag erstellen</p>
+<div class="text">
+	<form action="{VAR:SAVE_URL}" method="post">
+		Titel: <input type="text" name="titel" value="" style="margin-top: 10px;" placeholder="Titel"/> / 
+		Kategorie: <select name="kategorie" size="1">
+			{VAR:KATEGORIE}
+		</select><br>
+		<textarea name="beschreibung" style="margin-top: 10px;" placeholder="Beschreibung"></textarea>
+		<textarea name="keywords" style="margin-top: 10px;" placeholder="Keywords"></textarea>
+		<textarea name="text" class="ckeditor" cols="80" id="editor1" style="margin-top: 10px;" placeholder="Text"></textarea><br>
+		<input type="submit" value="speichern" />
+	</form>
+</div>

@@ -1,0 +1,24 @@
+<p class="title">Erweiterungen hinzuf&uuml;gen:</p>
+<div class="text">
+	<form action="{VAR:FORM_URL}?ext" method="post" enctype="multipart/form-data">
+		Link zur Erweiterung: <input type="url" name="url"><br>
+		<b>oder</b><br>
+		Direkt hochladen: <input type="file" name="ext"><br>
+		<input type="submit" class="cssbutton" value="einspielen">
+	</form>
+</div>
+
+<p class="title" style="margin-top: 70px;">Erweiterungen:</p>
+<div class="text">
+	Typ: 
+	<select size="1" id="typ" onchange="extension()" onload="extension()">
+		<option>Plugins</option>
+		<option>Skins</option>
+		<option>Klassen</option>
+		<option>Sidebar</option>
+	</select>
+	<button onclick="extension()">Aktualisieren</button>
+	<div class="ext">
+		<i>Bitte w&auml;hle einen Typ aus oder klicke auf aktualiesieren.</i>
+	</div>
+</div>

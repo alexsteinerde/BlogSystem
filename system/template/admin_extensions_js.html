@@ -1,0 +1,32 @@
+<script type="text/javascript">
+function extension() {
+	var value = document.getElementById('typ').value;
+	$.post("{VAR:URL}",{type: value}, function(erg) {
+		$(".ext").html(erg);
+	});
+}
+
+function updateSkin (skin) {
+	$.post("{VAR:UPDATE_SKIN_URL}?type=updateSkin",{ext: skin});
+	extension();
+}
+
+function pluginOn (ext) {
+	$.post("{VAR:UPDATE_SKIN_URL}?type=pluginOn",{ext: ext});
+	extension();
+}
+function pluginOff (ext) {
+	$.post("{VAR:UPDATE_SKIN_URL}?type=pluginOff",{ext: ext});
+	extension();
+}
+
+function skinDel (ext) {
+	$.post("{VAR:UPDATE_SKIN_URL}?type=skinDel",{ext: ext});
+	extension();
+}
+
+function extDel (ext) {
+	$.post("{VAR:UPDATE_SKIN_URL}?type=extDel",{ext: ext});
+	extension();
+}
+</script>

@@ -1,0 +1,52 @@
+<div class="time">
+				{VAR:BLOG_TIMEPAST}
+		</div>
+	<h1>{VAR:BLOG_TITLE}</h1>
+	<div class="text\" style="margin-bottom: 20px;">
+		{VAR:BLOG_TEXT}
+		<i style=\"margin-top: 5px;\">Kategorie: <a href="{VAR:KATEGORIE_LINK}"><b>{VAR:KATEGORIE}</b></a>, Autor: <b>{VAR:AUTOR}</b></i>
+	</div>
+<div class="title">Weitere Artikel zu diesem Thema:</div>
+<div class="text">
+	{VAR:MORE_ARTICLE}
+</div>
+<div style=\"marign-top: 50px;\">
+	<h2>Hinterlasse einen Kommentar</h2>
+	<form action="{VAR:COMMENT_FORM}" method="post">
+		<table>
+			<tr>
+				<td style="width: 150px;"><b>Name</b></td>
+				<td style="width: 430px;"><input type="text" value="" name="name" style="width: 430px; padding: 3px;"></td>
+			</tr>
+			<tr>
+				<td style="width: 150px;"><b>E-Mail</b> (wird nicht ver&ouml;ffentlicht)</td>
+				<td style="width: 430px;"><input type="email" value="" name="mail" style="width: 430px; padding: 3px;"></td>
+			</tr>
+			<tr>
+				<td style="width: 150px;"><b>Website</b> (freiwillig)</td>
+				<td style="width: 430px;"><input type="url" value="" name="website" style="width: 430px; padding: 3px;"></td>
+			</tr>
+		</table>
+		<div style="margin-top: 10px;">
+				 <textarea class="comment_text" name="text"></textarea>
+		</div>
+		<input type="text" name="email" class="spam_comment">
+		<input type="text" name="abcspam" value="spam#*" class="spam_comment">
+		<div style="margin-top: 5px;">
+			<input type="submit" value="kommentieren" class="cssbutton" />
+		</div>
+	</form>
+
+
+	{LOOP:COMMENT}
+	<div class="comment">
+		<div class="time">
+			{VAR:COMMENT_TIMEPAST}
+		</div>
+		<img src="{VAR:PICTURE}" class="profilbild"/>{VAR:NAME}
+		<div class="text" style="margin-top: 50px;">
+			{VAR:COMMENT_TEXT}
+		</div>
+	</div>
+	{/LOOP:COMMENT}
+</div>

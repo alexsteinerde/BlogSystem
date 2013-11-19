@@ -1,0 +1,19 @@
+<p class="title">Bilder hochladen</p>
+    <div class="text">
+    	<form action="?art=save" method="post" enctype="multipart/form-data">
+    		<input type="file" name="datei"><br />
+    		<input type="submit" value="Hochladen"> 
+    	</form>
+
+    </div>
+    <p class="title">Bilder hochladen</p>
+    <div class="text">
+        {LOOp:PICS}
+            <img src="{VAR:FILE_PATH}" id="ext-thumb" style="border: 1px solid grey;">
+            <div class="ext-infos">
+                <b>{VAR:PIC_NAME}</b><br />
+                <a href="#" class="del" onclick="getPopup('.del', 'M&ouml;chtest du dieses Bild wirklich l&ouml;schen?', 'Ja', '{VAR:DEL_URL}');">löschen</a>
+            </div>
+            <div style="clear:both;"></div>
+        {/LOOP:PICS}
+    </div>

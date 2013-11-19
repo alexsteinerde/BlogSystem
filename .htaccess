@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} page(.*)$
+RewriteRule page(.*)$ index.php?page=$1 [QSA]
+
+RewriteCond %{REQUEST_URI} include/(.*)$
+RewriteRule include/(.*)$ include.php?include=$1 [QSA]
+
+RewriteCond %{REQUEST_URI} article/(.*)$
+RewriteRule article/(.*)$ page/article?article=$1 [QSA]
